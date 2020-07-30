@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width==device-width, initial-scale=1.0">
+
+    <title>반응형 웹</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./mobile.css">
+
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <a href="#" class="gnb_menu">gnb menu</a>
+        <nav>
+          <a href="#">홈</a>
+          <a href="#">비즈니스</a>
+          <a href="#">프로필</a>
+          <a href="#">고객센터</a>
+          <a href="#">로그인</a>
+        </nav>
+        <div class="logo">
+          <img src="logo.png" alt="">
+        </div>
+      </header>
+        <section>
+            <h2 class="text-center">공고 등록하기</h2>
+            <form class="post-form" action="index.html" method="post">
+              <table>
+                <tr>
+                  <td>
+                    <div class="form-text">
+                      제목
+                    </div>
+                  </td>
+                  <td>
+                    <input class="form-input" type="text" name="" value="" autofocus>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="form-text">
+                      모집기간
+                    </div>
+                  </td>
+                  <td>
+                    <table class="date_table">
+                      <td><input class="form-input" type="date" name="" value="" id="date"></td>
+                      <td style="padding: 0 0 18px 20px">~<td>
+                      <td><input class="form-input" type="date" name="" value="" id="date"></td>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="form-text">
+                    이미지
+                  </div>
+                  </td>
+                  <td>
+                    <button class="filebtn">
+                    		 Browse File<input type="file"  name="file" hidden>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="form-text">
+                      모집인원
+                    </div>
+                  </td>
+                  <td>
+                    <input class="form-input" type="text" name="" value="" id="recuitCnt" >
+                    명
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="form-text">
+                      설명
+                    </div>
+                  </td>
+                  <td>
+                    <textarea name="name" rows="15" cols="90" id="web"></textarea>
+                    <textarea name="name" rows="10" cols="34" id="mobile"></textarea>
+                  </td>
+                </tr>
+              </table>
+              <div class="button_group">
+                <a href="#"><button class="button" type="button" name="button" id="write" >제출하기</button></a>
+              </div>
+             </form>
+        </section>
+        <footer>
+          Copyright @yangso corp.
+        </footer>
+  </body>
+</html>
