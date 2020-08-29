@@ -19,7 +19,7 @@
             <p>SW관리 프로그램</p>
           </div>
           <div class="menu">
-            공통코드 관리
+            위험 관리
           </div>
           <div class="login">
             Admin님
@@ -46,7 +46,7 @@
           <div class="dropdown">
             <button class="dropdown-title" >위험 관리 </button>
             <div class="dropdown-content">
-                <a href="./configuration.html">형상 관리</a>
+                <a href="#">형상 관리</a>
                <a href="#">취약점 점검항목</a>
                <a href="#">위험 관리</a>
            </div>
@@ -61,57 +61,60 @@
           </nav>
 
           <div class="right-container">
-            <form class="center_form">
-              <select class="select" name="">
-                <option value="상세코드">상세코드</option>
-              </select>
-              <input type="search" name="" value="" placeholder="검색어 입력">
-              <button type="button" name="button">검색</button>
-            </form>
-            <table class="list">
-              <tr>
-                <th style="width:30px;">id</th>
-                <th>대표코드</th>
-                <th>대표코드맵</th>
-                <th>상세코드</th>
-                <th>상세코드맵</th>
-              </tr>
-              <tr>
-                <td style="width:30px;">1</td>
-                <td>A001</td>
-                <td>자산</td>
-                <td>A001_1</td>
-                <td>제어봉구동장치</td>
-              </tr>
-              <tr>
-                <td style="width:30px;">2</td>
-                <td>A001</td>
-                <td>자산</td>
-                <td>A001_2</td>
-                <td>터빈계통PLC</td>
-              </tr>
-              <tr>
-                <td style="width:30px;">3</td>
-                <td>B001</td>
-                <td>기술 보안항목</td>
-                <td>B001_1</td>
-                <td>계정관리</td>
-              </tr>
-              <tr>
-                <td style="width:30px;">4</td>
-                <td>B001</td>
-                <td>기술 보안항목</td>
-                <td>B001_2</td>
-                <td>접근통제</td>
-              </tr>
-            </table>
-            <div class="button_group">
-              <a href="#"><button class="button" type="button">등록</button></a>
+            <div class="danger-search">
+              <h3>위험 관리 내역을 확인할 자산을 선택하세요</h3>
+              <input type="text" name="" value="">
+              <button type="button" name="button">찾기</button>
             </div>
+              <table class="list" style="margin-top:0;">
+                <tr>
+                  <th style="width:30px;">id</th>
+                  <th>자산 명</th>
+                  <th>버전</th>
+                  <th>점검일자</th>
+                  <th>점검주기</th>
+                </tr>
+                <tr>
+                  <td style="width:30px;">1</td>
+                  <td>터빈계통PLC</td>
+                  <td>6.0</td>
+                  <td>2019.07.14</td>
+                  <td>1년</td>
+                </tr>
+                <tr>
+                  <td style="width:30px;">2</td>
+                  <td>지진감시PLC</td>
+                  <td>2.2</td>
+                  <td>2019.05.30</td>
+                  <td>2개월</td>
+                </tr>
+                <tr>
+                  <td style="width:30px;">3</td>
+                  <td>유지보수 모니터링기기</td>
+                  <td>3.5</td>
+                  <td>2019.04.17</td>
+                  <td>6개월</td>
+                </tr>
+                <tr>
+                  <td style="width:30px;">4</td>
+                  <td>제어 봉구동장치PLC</td>
+                  <td>1.0</td>
+                  <td>2019.04.17</td>
+                  <td>3년</td>
+                </tr>
+                <tr>
+                  <td style="width:30px;">5</td>
+                  <td>지진감시계통PLC</td>
+                  <td>2.1</td>
+                  <td>2019.03.30</td>
+                  <td>2개월</td>
+                </tr>
+              </table>
+        </div>
+        <div class="big_button_group">
+          <a href="#"><button class="button" style="width:80px;">위험관리</button></a>
         </div>
         </section>
   </body>
-  <script>
 
-  </script>
 </html>

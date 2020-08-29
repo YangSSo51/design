@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width==device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>sw관리 프로그램</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./menu.css">
+
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+          <div class="top">
+          <div class="home">
+            ICS SW MANAGEMENT PROGRAM
+          </div>
+
+          <div class="login">
+            Admin님
+          </div>
+        </div>
+        <div class="drop-down" id="drop-down">
+        <nav id="nav"  onmouseleave="outMenu()">
+        <div class="nav">
+          <p onmouseenter="onMenu()">자산관리</p>
+            <a href="#" onmouseover="onMouse(this)" onmouseout="outMouse(this)">자산 내역</a>
+            <a href="#" onmouseover="onMouse(this)" onmouseout="outMouse(this)">자산 구매</a>
+            <a href="#" onmouseover="onMouse(this)" onmouseout="outMouse(this)">공통 코드 관리</a>
+        </div>
+        <div class="nav">
+          <p onmouseenter="onMenu()">무결성 관리</p>
+           <a href="#" onmouseover="onMouse(this)" onmouseout="outMouse(this)">자산 무결성 등록</a>
+           <a href="#" onmouseover="onMouse(this)" onmouseout="outMouse(this)">무결성 유지 점검</a>
+           <a style="visibility:hidden;">공백</a>
+        </div>
+        <div class="nav">
+          <p onmouseenter="onMenu()">위험 관리</p>
+          <a href="#" onmouseover="onMouse(this)" onmouseout="outMouse(this)">형상 관리</a>
+           <a href="#" onmouseover="onMouse(this)" onmouseout="outMouse(this)">취약점 점검항목</a>
+           <a href="#" onmouseover="onMouse(this)" onmouseout="outMouse(this)">위험 관리</a>
+        </div>
+        <div class="nav" style="border-right:none;">
+          <p onmouseenter="onMenu()">게시판 </p>
+          <a href="#" onmouseover="onMouse(this)" onmouseout="outMouse(this)">개발자에게 문의</a>
+           <a href="#" onmouseover="onMouse(this)" onmouseout="outMouse(this)">FAQ</a>
+           <a style="visibility:hidden;">공백</a>
+        </div>
+        </nav>
+        </div>
+      </header>
+        <section>
+          <div class="main-container">
+          <h2 class="main-title">공통코드 관리</h2>
+          <hr>
+          <form class="center_form">
+            <select class="select" name="">
+              <option value="상세코드">상세코드</option>
+            </select>
+            <input type="search" name="" value="" placeholder="검색어 입력">
+            <button type="button" name="button">검색</button>
+          </form>
+          <table class="list">
+            <tr>
+              <th style="width:30px;">id</th>
+              <th>대표코드</th>
+              <th>대표코드맵</th>
+              <th>상세코드</th>
+              <th>상세코드맵</th>
+            </tr>
+            <tr>
+              <td style="width:30px;">1</td>
+              <td>A001</td>
+              <td>자산</td>
+              <td>A001_1</td>
+              <td>제어봉구동장치</td>
+            </tr>
+            <tr>
+              <td style="width:30px;">2</td>
+              <td>A001</td>
+              <td>자산</td>
+              <td>A001_2</td>
+              <td>터빈계통PLC</td>
+            </tr>
+            <tr>
+              <td style="width:30px;">3</td>
+              <td>B001</td>
+              <td>기술 보안항목</td>
+              <td>B001_1</td>
+              <td>계정관리</td>
+            </tr>
+            <tr>
+              <td style="width:30px;">4</td>
+              <td>B001</td>
+              <td>기술 보안항목</td>
+              <td>B001_2</td>
+              <td>접근통제</td>
+            </tr>
+          </table>
+          <div class="button_group">
+            <a href="#"><button class="button" type="button">등록</button></a>
+          </div>
+          </div>
+        </section>
+
+  </body>
+  <script>
+
+    function onMenu(){
+      document.getElementById('drop-down').style.visibility="visible";
+    }
+    function outMenu(){
+      document.getElementById('drop-down').style.visibility="hidden";
+    }
+    function onMouse(x){
+      x.style.backgroundColor="#538234";
+      x.style.color="#fff";
+    }
+    function outMouse(x){
+      x.style.backgroundColor="#fff";
+      x.style.color="#000";
+    }
+  </script>
+</html>

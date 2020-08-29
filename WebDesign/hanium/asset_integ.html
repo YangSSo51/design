@@ -62,59 +62,49 @@
           </div>
           </nav>
 
-          <div class="right-container">
-            <form class="center_form">
-              <select class="select" name="">
-                <option value="상세코드">상세코드</option>
-              </select>
-              <input type="search" name="" value="" placeholder="검색어 입력">
-              <button type="button" name="button">검색</button>
-            </form>
+          <div class="right-container" style="margin-top:100px;">
             <table class="list">
               <tr>
                 <th style="width:30px;">id</th>
-                <th>자산명</th>
-                <th>작업 신청서</th>
-                <th>등록일자</th>
-                <th>수행일자</th>
-                <th>승인여부</th>
+                <th>대분류</th>
+                <th>소분류</th>
+                <th>무결성 점검</th>
+                <th>하드웨어 접근</th>
+                <th>사용 여부</th>
               </tr>
               <tr>
-                <td style="width:30px;">1</td>
-                <td>ServerWin7_1</td>
-                <td><button type="button" class="detail-btn">상세보기</button></td>
-                <td>2019-03-14</td>
-                <td>2019-04-02</td>
-                <td><i class="fa fa-check"></i></td>
-              </tr>
-              <tr>
-                <td style="width:30px;">2</td>
-                <td>PcWinXP_1</td>
-                <td><button type="button" class="detail-btn">상세보기</button></td>
-                <td>2019-09-26</td>
-                <td>2019-07-07</td>
-                <td><i class="fa fa-close"></i></td>
-              </tr>
-              <tr>
-                <td style="width:30px;">3</td>
-                <td>PLC_3</td>
-                <td><button type="button" class="detail-btn">상세보기</button></td>
-                <td>2019-11-15</td>
+                <td>1</td>
+                <td>PLC</td>
                 <td>-</td>
-                <td><i class="fa fa-check"></i></td>
+                <td>O</td>
+                <td>O</td>
+                <td>O</td>
               </tr>
               <tr>
-                <td style="width:30px;">4</td>
-                <td>ServerUnix_9</td>
-                <td><button type="button" class="detail-btn">상세보기</button></td>
-                <td>2020-01-04</td>
-                <td>2020-03-31</td>
-                <td><i class="fa fa-close" ></i></td>
+                <td>2</td>
+                <td>DCS</td>
+                <td>-</td>
+                <td>O</td>
+                <td>O</td>
+                <td>O</td>
               </tr>
               <tr>
-
+                <td>3</td>
+                <td>Server</td>
+                <td>Win 7</td>
+                <td>O (PsFCIV)</td>
+                <td>O</td>
+                <td>X</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>PC</td>
+                <td>Linux</td>
+                <td>O (MdSsum)</td>
+                <td>O</td>
+                <td>O</td>
+              </tr>
             </table>
-
             <div class="button_group">
                 <button type="button" id="modal_open_btn">등록</button>
             </div>
@@ -185,6 +175,7 @@
                 </div>
               </div><!--modal layer-->
               </div><!--modal-->
+              
             </div><!--right-container-->
         </section>
         </div>
