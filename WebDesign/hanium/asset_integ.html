@@ -65,15 +65,17 @@
           <div class="right-container" style="margin-top:100px;">
             <table class="list">
               <tr>
-                <th style="width:30px;">id</th>
-                <th>대분류</th>
-                <th>소분류</th>
-                <th>무결성 점검</th>
-                <th>하드웨어 접근</th>
-                <th>사용 여부</th>
+                <th style="width:15px;"></th>
+                <th>자산명</th>
+                <th>설비유형</th>
+                <th>OS유형</th>
+                <th>무결성 점검 기능 보유 여부</th>
+                <th>운영/제어로직 해시 값 입력</th>
+                <th>엔지니어링 S/W해시 값 입력</th>
+                <th>하드웨어 접근 통제 여부</th>
               </tr>
               <tr>
-                <td>1</td>
+                <td style="width:15px;"><input type="checkbox" ></td>
                 <td>PLC</td>
                 <td>-</td>
                 <td>O</td>
@@ -81,7 +83,7 @@
                 <td>O</td>
               </tr>
               <tr>
-                <td>2</td>
+                <td style="width:15px;"><input type="checkbox" ></td>
                 <td>DCS</td>
                 <td>-</td>
                 <td>O</td>
@@ -89,7 +91,7 @@
                 <td>O</td>
               </tr>
               <tr>
-                <td>3</td>
+                <td style="width:15px;"><input type="checkbox" ></td>
                 <td>Server</td>
                 <td>Win 7</td>
                 <td>O (PsFCIV)</td>
@@ -97,7 +99,7 @@
                 <td>X</td>
               </tr>
               <tr>
-                <td>4</td>
+                <td style="width:15px;"><input type="checkbox" ></td>
                 <td>PC</td>
                 <td>Linux</td>
                 <td>O (MdSsum)</td>
@@ -106,7 +108,7 @@
               </tr>
             </table>
             <div class="button_group">
-                <button type="button" id="modal_open_btn">등록</button>
+                <button type="button" id="modal_open_btn">수정</button>
             </div>
               <div id="modal">
                 <div class="modal_layer">
@@ -114,36 +116,7 @@
                   <div class="modal_title">
                     자산 무결성 등록
                   </div>
-                  <table class="modal_table">
-                    <tr>
-                      <th>유형</th>
-                      <th>상세유형</th>
-                    </tr>
-                    <tr>
-                      <td onclick="clickBtn(this)">PLC/DCS<i class="fa fa-caret-right"></i></td>
-                      <td onclick="clickBtn(this)">Window XP<i class="fa fa-caret-right"></i></td>
-                    </tr>
-                    <tr>
-                      <td onclick="clickBtn(this)">PC/Server<i class="fa fa-caret-right"></i></td>
-                      <td onclick="clickBtn(this)">Window 2000<i class="fa fa-caret-right"></i></td>
-                    </tr>
-                    <tr>
-                      <td style="background-color: #fff;"></td>
-                      <td onclick="clickBtn(this)">Window 2003<i class="fa fa-caret-right"></i></td>
-                    </tr>
-                    <tr>
-                      <td style="background-color: #fff;"></td>
-                      <td onclick="clickBtn(this)">Window Vista<i class="fa fa-caret-right"></i></td>
-                    </tr>
-                    <tr>
-                      <td style="background-color: #fff;"></td>
-                      <td onclick="clickBtn(this)">Window 7<i class="fa fa-caret-right"></i></td>
-                    </tr>
-                    <tr>
-                      <td style="background-color: #fff;"></td>
-                      <td onclick="clickBtn(this)">Window 8<i class="fa fa-caret-right"></i></td>
-                    </tr>
-                  </table>
+
                   <div class="modal_right">
                     <form class="" action="index.html" method="post">
                     <p>
@@ -170,12 +143,12 @@
                   </div>
                   <div class="modal_button">
                     <button type="button" id="modal_close_btn">취소</button>
-                    <button type="button" id="submit">등록</button>
+                    <button type="button" id="submit">수정</button>
                   </div>
                 </div>
               </div><!--modal layer-->
               </div><!--modal-->
-              
+
             </div><!--right-container-->
         </section>
         </div>

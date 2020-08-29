@@ -146,10 +146,11 @@ footer{
 }
 
 /*table*/
+
 .list {
 	margin: 50px auto;
 	margin-bottom: 20px;
-	width: 900px;
+	width: 1200px;
 }
 
 
@@ -185,7 +186,7 @@ footer{
 /*button*/
 .button_group{
 	margin: 30px auto;
-	width: 900px;
+	width: 1200px;
 }
 .button_group button{
 	margin-top:20px;
