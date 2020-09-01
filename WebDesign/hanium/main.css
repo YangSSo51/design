@@ -312,7 +312,7 @@ td p{
 }
 
 /*modal*/
-#modal,#modal1,#modal2,#modal3,#modal4,#modal5,#modal6 {
+#modal,#modal0,#modal1,#modal2,#modal3,#modal4,#modal5,#modal6 {
 	display: none;
 	position:relative;
 	width:100%;
@@ -322,7 +322,7 @@ td p{
 	z-index:20;
 }
 
-#modal h2,#modal1 h2,#modal2 h2,#modal3 h2,#modal4 h2,#modal5 h2,#modal6 h2 {
+#modal h2,#modal0 h2,#modal1 h2,#modal2 h2,#modal3 h2,#modal4 h2,#modal5 h2,#modal6 h2 {
 	margin:0;
 }
 
@@ -504,7 +504,7 @@ hr{
 	border-top:1px solid #dbdbdb;
 	margin-top: 0;
 }
-#modal .small_modal_content {
+#modal .small_modal_content, #modal0 .small_modal_content{
 	width:300px;
 	margin:80px auto;
 	padding:20px;

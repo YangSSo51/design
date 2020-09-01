@@ -61,50 +61,94 @@
            </div>
           </div>
           </nav>
-
           <div class="right-container">
-            <table class="list">
+            <table class="list" style="margin-top:200px;">
               <tr>
                 <th style="width:30px;">Id</th>
                 <th>자산명</th>
                 <th>등록 일자</th>
-                <th>보안항목점검 여부</th>
+                <th>기술적 보안항목 점검여부</th>
+                <th>Secure coding 적용여부</th>
+                <th>취약점 체크 여부</th>
+                <th>무결성 검증 기능 탑재</th>
+                <th>봉인 훼손</th>
+                <th>기능/성능 시험</th>
                 <th>구매확정</th>
               </tr>
               <tr>
                 <td style="width:30px;">1</td>
-                <td>ServerWin7_1</td>
+                <td>ServerUnix_9</td>
                 <td>2020-03-31</td>
-                <td>YES</td>
-                <td>YES</td>
+                <td>O</td>
+                <td>O</td>
+                <td>O</td>
+                <td>O</td>
+                <td>O</td>
+                <td>O</td>
+                <td>O</td>
               </tr>
               <tr>
                 <td style="width:30px;">2</td>
                 <td>PcWinXP_1</td>
-                <td>2020-03-25</td>
-                <td><button type="button" onclick="openbtn()" class="detail-btn">보안항목 점검</button></td>
-                <td>NO</td>
+                <td>2020-03-28</td>
+                <td>O</td>
+                <td>O</td>
+                <td>O</td>
+                <td>O</td>
+                <td>O</td>
+                <td>O</td>
+                <td>O</td>
               </tr>
               <tr>
                 <td style="width:30px;">3</td>
                 <td>PLC_3</td>
-                <td>2020-03-11</td>
-                <td><button type="button" onclick="openbtn()" class="detail-btn">보안항목 점검</button></td>
-                <td>NO</td>
+                <td>2020-09-30</td>
+                <td>O</td>
+                <td>O</td>
+                <td>O</td>
+                <td>O</td>
+                <td>O</td>
+                <td>O</td>
+                <td>O</td>
               </tr>
-              <tr>
-                <td style="width:30px;">4</td>
-                <td>ServerUnix_9</td>
-                <td>2020-03-07</td>
-                <td>YES</td>
-                <td>YES</td>
-              </tr>
-
             </table>
 
             <div class="button_group">
-                <button type="button" style="width:100px;">신규 자산 등록</button>
+                <button type="button" style="width:100px;" id="modal_open_btn">신규 자산 등록</button>
             </div>
+            <div id="modal0">
+              <div class="modal_layer">
+              <div class="small_modal_content">
+                <div class="modal_title">
+                  자산명
+                </div>
+                  <form class="" action="index.html" method="post">
+                    <p>
+                      <span>자산명</span>
+                    </p>
+                    <select class="" name="" style="width:200px; margin-left:20px;">
+                      <option value="" >ServerUnix_9</option>
+                    </select>
+                <p>
+                  <span>설비유형</span>
+                </p>
+                  <input type="text" placeholder="PC/Server"></input>
+                <p>
+                  <span>OS유형</span>
+                </p>
+                <input type="text" placeholder="Window7"></input>
+                <p>
+                  <span>구매자</span>
+                </p>
+                <input type="text" placeholder="김은지"></input>
+                  <div class="modal_button" style="width:300px;">
+                    <button type="button" id="modal_close_btn">취소</button>
+                    <button type="button" onclick="modal(0,1,0)">등록</button>
+                  </div>
+                </form>
+              </div>
+            </div><!--modal layer-->
+            </div><!--modal-->
             <div id="modal1">
               <div class="modal_layer">
               <div class="modal_content">
@@ -343,7 +387,7 @@
                   </tr>
                 </table>
                 <div class="modal_button">
-                  <button type="button" class="continue" onclick="modal(5,6,0)">계속하기</button>
+                  <button type="button" class="continue" onclick="modal(5,6,1)">계속하기</button>
                   <button type="button" onclick="closebtn(5)" style="width:80px;">반출 처리</button>
                 </div>
               </div>
@@ -400,7 +444,7 @@
                   </tr>
                 </table>
                 <div class="modal_button">
-                  <button type="button" class="continue" onclick="modal(5,6,0)">계속하기</button>
+                  <button type="button" class="continue" onclick="modal(6,0,0)">완료하기</button>
                   <button type="button" onclick="closebtn(6)" style="width:80px;">반출 처리</button>
                 </div>
               </div>
@@ -411,7 +455,7 @@
   </body>
   <script>
       $("#modal_open_btn").click(function(){
-          $("#modal1").attr("style", "display:block");
+          $("#modal0").attr("style", "display:block");
       });
 
        $("#modal_close_btn").click(function(){
@@ -426,8 +470,12 @@
 
     function modal(x,y,z){
       if($("input[name=no"+x+"]:checked").length==z){
-        $("#modal"+x).attr("style", "display:none");
-        $("#modal"+y).attr("style", "display:block");
+        if(x==6){
+          $("#modal"+x).attr("style", "display:none");
+        }else{
+          $("#modal"+x).attr("style", "display:none");
+          $("#modal"+y).attr("style", "display:block");
+        }
       }else{
         if(x==1 || x==3 || x==4){
           alert(" *보안 항목 점검을 계속 진행할 수 없습니다.\n부적합 항목을 공급사 측에 전달한 후 계속 진행하세요.");
@@ -436,7 +484,6 @@
         }else if(x==5 || x==6){
           alert(" *디지털 시스템 발전소에 반입할 수 없습니다\n디지털 시스템 발전소 반출 처리 해주시기 바랍니다.");
         }
-        alert("error");
       }
     }
     $("input[name=no1]").click(function(){
