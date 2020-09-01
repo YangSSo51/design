@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width==device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+    <title>sw관리 프로그램</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./main.css">
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="top">
+          <div class="home">
+            <p>산업제어시스템</p>
+            <p>SW관리 프로그램</p>
+          </div>
+          <div class="menu">
+            무결성 유지 점검
+          </div>
+          <div class="login">
+            Admin님
+          </div>
+        </div>
+      </header>
+        <section>
+          <nav>
+          <div class="dropdown">
+            <button class="dropdown-title">자산관리</button>
+              <div class="dropdown-content">
+                <a href="#">자산 내역</a>
+                <a href="#">자산 구매</a>
+                <a href="#">공통 코드 관리</a>
+              </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-title">무결성 관리 </button>
+              <div class="dropdown-content">
+               <a href="#">자산 무결성 등록</a>
+               <a href="#">무결성 유지 점검</a>
+             </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-title" >위험 관리 </button>
+            <div class="dropdown-content">
+                <a href="#">형상 관리</a>
+               <a href="#">취약점 점검항목</a>
+               <a href="#">위험 관리</a>
+           </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-title">게시판</button>
+            <div class="dropdown-content">
+              <a href="#">개발자에게 문의</a>
+             <a href="#">FAQ</a>
+           </div>
+          </div>
+          </nav>
+          <div class="right-container">
+            <table class="detail-list">
+              <tr>
+                <td class="detail-title">버전명</td>
+                <td>터빈계통PLC_2020_1</td>
+                <td class="detail-title">점검자</td>
+                <td class="small-td">김은지</td>
+              </tr>
+              <tr>
+                <td class="detail-title">점검연도</td>
+                <td>2020</td>
+                <td class="detail-title">점검일자</td>
+                <td class="small-td">08-28</td>
+              </tr>
+              <tr>
+                <td class="detail-title">점검분기</td>
+                <td id="right">3분기</td>
+                <td class="small-td" id="side"></td>
+                <td class="small-td" id="left"></td>
+              </tr>
+              <tr>
+                <td class="detail-title">점검설비</td>
+                <td id="right">터빈계통PLC</td>
+                <td class="small-td" id="side"></td>
+                <td class="small-td" id="left"></td>
+              </tr>
+              <tr>
+                <td class="detail-title">점검내용</td>
+                <td id="right">해당 자산은 8월 28일 진행한 무결성 유지 점검에서 무결성 정보 유치중 상태를 받았음</td>
+                <td class="small-td" id="side"></td>
+                <td class="small-td" id="left"></td>
+              </tr>
+              <tr>
+                <td class="detail-title">점검결과</td>
+                <td id="right">부적합</td>
+                <td class="small-td" id="side"></td>
+                <td class="small-td" id="left"></td>
+              </tr>
+            </table>
+            <div class="button_group" style="width:1100px;">
+                <button type="button" id="modal_open_btn">삭제</button>
+                <button type="button" id="modal_open_btn">수정</button>
+            </div>
+
+            </div><!--right-container-->
+        </section>
+        </div>
+  </body>
+  <script>
+      $("#modal_open_btn").click(function(){
+          $("#modal1").attr("style", "display:block");
+      });
+
+       $("#modal_close_btn").click(function(){
+          $("#modal1").attr("style", "display:none");
+      });
+      function modal(x,y){
+            $("#modal"+x).attr("style", "display:none");
+            $("#modal"+y).attr("style", "display:block");
+      }
+  </script>
+
+</html>
