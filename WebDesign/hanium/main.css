@@ -486,6 +486,7 @@ td p{
 .tab-group{
 	margin-left: 100px;
 	margin-top: 50px;
+	width:1200px;
 }
 
 .tab-group button{
