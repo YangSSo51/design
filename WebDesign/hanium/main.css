@@ -145,6 +145,12 @@ footer{
   margin-left: 10px;
 }
 
+/*center page*/
+.center-page{
+	margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+}
 /*table*/
 
 .list {
@@ -258,8 +264,8 @@ footer{
 
 /*danger*/
 .danger-search{
-	margin: 100px 0 20px 18%;
-	width: 1100px;
+	margin: 100px 0 20px 6%;
+	width: 1200px;
 }
 .danger-search input{
 	margin: 10px;
