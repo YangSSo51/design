@@ -62,8 +62,8 @@
           </nav>
           <div class="right-container" style="margin-top:100px;">
             <div class="tab-group">
-              <a href="./common_code.html"><button type="button" name="button">PLC</button></a>
-              <a href="./common_code_detail.html"><button type="button" name="button" class="white" style="margin-left:-5px;">PC/Server</button></a>
+              <a href="./asset_integ2.html"><button type="button" name="button" class="white">PLC</button></a>
+              <a href="./asset_integ.html"><button type="button" name="button" style="margin-left:-5px;">PC/Server</button></a>
             </div>
             <hr>
             <table class="list">
@@ -73,29 +73,9 @@
                 <th>설비유형</th>
                 <th>OS유형</th>
                 <th>무결성 점검 기능 보유 여부</th>
+                <th>하드웨어 접근 통제 여부</th>
                 <th>운영/제어로직 해시 값 입력</th>
                 <th>엔지니어링 S/W해시 값 입력</th>
-                <th>하드웨어 접근 통제 여부</th>
-              </tr>
-              <tr>
-                <td style="width:15px;"><input type="checkbox" ></td>
-                <td>터빈계통PLC</td>
-                <td>PLC</td>
-                <td>Firmware</td>
-                <td>O</td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td>O</td>
-              </tr>
-              <tr>
-                <td style="width:15px;"><input type="checkbox" ></td>
-                <td>제어봉구동장치</td>
-                <td>DCS</td>
-                <td>Firmware</td>
-                <td>O</td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td>O</td>
               </tr>
               <tr>
                 <td style="width:15px;"><input type="checkbox" ></td>
@@ -103,53 +83,14 @@
                 <td>Server</td>
                 <td>Win 7</td>
                 <td>O</td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td>X</td>
+                <td>O</td>
+                <td><input type="text" placeholder="9d78bdf9bcf97"></td>
+                <td><input type="text" placeholder="9d78bdf9bcf97"></td>
               </tr>
             </table>
             <div class="button_group">
                 <button type="button" id="modal_open_btn">수정</button>
             </div>
-              <div id="modal">
-                <div class="modal_layer">
-                <div class="modal_content">
-                  <div class="modal_title">
-                    자산 무결성 등록
-                  </div>
-
-                  <div class="modal_right">
-                    <form class="" action="index.html" method="post">
-                    <p>
-                      <span>무결성 유지 기능을 검사하였습니까?</span>
-                      <label><input type="checkbox"></label>
-                    </p>
-                    <p>
-                      <span>운영/제어로직 해시 값 입력</span>
-                    </p>
-                      <input type="text" placeholder="mdU8Jndflcv7xh"></input>
-                    <p>
-                    <span>엔지니어링 S/W 해시 값 입력</span>
-                  </p>
-                    <input type="text" placeholder="5vL73jZz9e23pf"></input>
-                    <p>
-                      <span>하드웨어 접근 통제를 하였습니까?</span>
-                      <label><input type="checkbox"></label>
-                    </p>
-                    <p>
-                      <span>사용 여부</span>
-                      <label><input type="checkbox"></label>
-                    </p>
-                  </form>
-                  </div>
-                  <div class="modal_button">
-                    <button type="button" id="modal_close_btn">취소</button>
-                    <button type="button" id="submit">수정</button>
-                  </div>
-                </div>
-              </div><!--modal layer-->
-              </div><!--modal-->
-
             </div><!--right-container-->
         </section>
         </div>
